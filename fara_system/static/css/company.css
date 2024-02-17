@@ -1,0 +1,54 @@
+.sec_project {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.sec_project_top {
+  height: 20rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+}
+.sec_project_down {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+}
+
+.grid {
+  width: 900px;
+  display: grid;
+  background: #dfdfdf;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 200px;
+  grid-gap: 1px;
+}
+
+.grid-item {
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid_img {
+  height: 140px;
+  transition-duration: 200ms;
+  /* background-color: rgb(244, 244, 255); */
+  /* border-radius: 100px; */
+  /* padding: 5px; */
+}
+
+.grid_img:hover{
+  height: 160px;
+  cursor: pointer;
+}

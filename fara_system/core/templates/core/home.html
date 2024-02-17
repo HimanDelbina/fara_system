@@ -12,62 +12,146 @@
             </nav>
         </header>
         <div class="sec_home_body">
-
         </div>
-        
         <div class="sec_home_down">
-                <div class="scroller" data-direction="right" data-speed="fas">
-                    <div class="scroller__inner">
-            
-                        
-                        {% for data in product_data %}
-                        <div class="prodect_item">
-                            <img src="{{data.image.url}}" alt class="product_img">
-                            <!-- <p>{{data.name}}</p> -->
-                        </div>
-                        {% endfor %}
-                        {% for data in product_data %}
-                        <div class="prodect_item">
-                            <img src="{{data.image.url}}" alt class="product_img">
-                            <!-- <p>{{data.name}}</p> -->
-                        </div>
-                        {% endfor %}
-                            
+            <div class="scroller" data-direction="right" data-speed="fas">
+                <div class="scroller__inner">
+                    {% for data in product_data %}
+                    <div class="prodect_item">
+                        <img src="{{data.image.url}}" alt class="product_img">
+                    
                     </div>
-                  </div>
-
+                    {% endfor %}
+                    {% for data in product_data %}
+                    <div class="prodect_item">
+                        <img src="{{data.image.url}}" alt class="product_img">
+                    
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+<section>
+    <div class="sec_project">
+        <div class="sec_project_top"></div>
+        <div class="sec_project_down">
+            <div class="grid">
+                {% for data in company_data %}
+                <div class="grid-item">
+                    <img src="{{data.image.url}}" alt class="grid_img">
+                </div>
+                {% endfor %}
             </div>
         </div>
     </div>
 </section>
 <section>
-    <div class="sec_project">
+    <div class="sec_stunnig">
+        <div class="expanding-flex-cards">
+            <div class="expanding-flex-cards-item active">
+                <img src="static/image/1.png" alt="" class="expanding-flex-cards-item-img" />
+                <div class="expanding-flex-cards-item-body">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="expanding-flex-cards-item-footer">
+                    <div class="expanding-flex-cards-icon">1</div>
+                    <div class="expanding-flex-cards-title">Card Item 1</div>
+                </div>
+            </div>
+            <div class="expanding-flex-cards-item">
+                <img src="static/image/2.png" alt="" class="expanding-flex-cards-item-img" />
+                <div class="expanding-flex-cards-item-body">
+                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+                </div>
+                <div class="expanding-flex-cards-item-footer">
+                    <div class="expanding-flex-cards-icon">2</div>
+                    <div class="expanding-flex-cards-title">Card Item 2</div>
+                </div>
+            </div>
+            <div class="expanding-flex-cards-item">
+                <img src="static/image/3.png" alt="" class="expanding-flex-cards-item-img" />
+                <div class="expanding-flex-cards-item-body">
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+                <div class="expanding-flex-cards-item-footer">
+                    <div class="expanding-flex-cards-icon">3</div>
+                    <div class="expanding-flex-cards-title">Card Item 3</div>
+                </div>
+            </div>
+            <div class="expanding-flex-cards-item">
+                <img src="static/image/1.png" alt="" class="expanding-flex-cards-item-img" />
+                <div class="expanding-flex-cards-item-body">
+                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+                </div>
+                <div class="expanding-flex-cards-item-footer">
+                    <div class="expanding-flex-cards-icon">4</div>
+                    <div class="expanding-flex-cards-title">Card Item 4</div>
+                </div>
+            </div>
+            <div class="expanding-flex-cards-item">
+                <img src="static/image/2.png" alt="" class="expanding-flex-cards-item-img" />
+                <div class="expanding-flex-cards-item-body">
+                    <p>Lorem ipsum dolor sit.</p>
+                </div>
+                <div class="expanding-flex-cards-item-footer">
+                    <div class="expanding-flex-cards-icon">5</div>
+                    <div class="expanding-flex-cards-title">Card Item 5</div>
+                </div>
+            </div>
+        </div>
 
-        <div class="grid">
-            <div class="grid-item">himan</div>
-            <div class="grid-item">sara</div>
-            <div class="grid-item">himan</div>
-            <div class="grid-item">sara</div>
-            <div class="grid-item">himan</div>
-            <div class="grid-item">sara</div>
-            <div class="grid-item">himan</div>
-            <div class="grid-item">sara</div>
-          </div>
+        <!-- 
+        <div class="wrapper">
+            <div class="container">
+                <input type="radio" name="slide" id="c1" checked>
+                <label for="c1" class="card">
+                    <div class="row">
+                        <div class="icon">1</div>
+                        <div class="description">
+                            <h4>Winter</h4>
+                            <p>Winter has so much to offer -
+                                creative activities</p>
+                        </div>
+                    </div>
+                </label>
+                <input type="radio" name="slide" id="c2">
+                <label for="c2" class="card">
+                    <div class="row">
+                        <div class="icon">2</div>
+                        <div class="description">
+                            <h4>Digital Technology</h4>
+                            <p>Gets better every day -
+                                stay tuned</p>
+                        </div>
+                    </div>
+                </label>
+                <input type="radio" name="slide" id="c3">
+                <label for="c3" class="card">
+                    <div class="row">
+                        <div class="icon">3</div>
+                        <div class="description">
+                            <h4>Globalization</h4>
+                            <p>Help people all over the world</p>
+                        </div>
+                    </div>
+                </label>
+                <input type="radio" name="slide" id="c4">
+                <label for="c4" class="card">
+                    <div class="row">
+                        <div class="icon">4</div>
+                        <div class="description">
+                            <h4>New technologies</h4>
+                            <p>Space engineering becomes
+                                more and more advanced</p>
+                        </div>
+                    </div>
+                </label>
+            </div>
+        </div> -->
     </div>
 </section>
 
 {% endblock home %}
-
-
-<!-- {% for data in project_data %}
-<div class="flex_box">
-    <div class="flex_box_left">
-        <img src="{{data.first_image.url}}" alt class="project_img">
-    </div>
-    <hr class="hr_vertical" />
-    <div class="flex_box_right">
-        <p class="project_title">{{data.name}}</p>
-
-    </div>
-</div>
-{% endfor %} -->
