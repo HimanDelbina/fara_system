@@ -1,7 +1,73 @@
 {% extends './main.html' %} {% block home %}{% load static %}
 
 <section>
+    <div class="sec_home">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#" class="nav-link">صفحه اصلی</a></li>
+                    <li><a href="#" class="nav-link">درباره ما</a></li>
+                    <li><a href="#" class="nav-link">تماس با ما</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="sec_home_body">
 
+        </div>
+        
+        <div class="sec_home_down">
+                <div class="scroller" data-direction="right" data-speed="fas">
+                    <div class="scroller__inner">
+            
+                        
+                        {% for data in product_data %}
+                        <div class="prodect_item">
+                            <img src="{{data.image.url}}" alt class="product_img">
+                            <!-- <p>{{data.name}}</p> -->
+                        </div>
+                        {% endfor %}
+                        {% for data in product_data %}
+                        <div class="prodect_item">
+                            <img src="{{data.image.url}}" alt class="product_img">
+                            <!-- <p>{{data.name}}</p> -->
+                        </div>
+                        {% endfor %}
+                            
+                    </div>
+                  </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="sec_project">
+
+        <div class="grid">
+            <div class="grid-item">himan</div>
+            <div class="grid-item">sara</div>
+            <div class="grid-item">himan</div>
+            <div class="grid-item">sara</div>
+            <div class="grid-item">himan</div>
+            <div class="grid-item">sara</div>
+            <div class="grid-item">himan</div>
+            <div class="grid-item">sara</div>
+          </div>
+    </div>
 </section>
 
 {% endblock home %}
+
+
+<!-- {% for data in project_data %}
+<div class="flex_box">
+    <div class="flex_box_left">
+        <img src="{{data.first_image.url}}" alt class="project_img">
+    </div>
+    <hr class="hr_vertical" />
+    <div class="flex_box_right">
+        <p class="project_title">{{data.name}}</p>
+
+    </div>
+</div>
+{% endfor %} -->
