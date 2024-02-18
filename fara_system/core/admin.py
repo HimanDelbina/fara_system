@@ -13,5 +13,11 @@ class CompanyAdmin(admin.ModelAdmin):
     list_display = ['name', 'image_tag']
     
     
+class ServiceAdmin(admin.ModelAdmin):
+    fields = ['name', 'image']
+    list_display = ['name', 'image_tag']
+    
+    
 admin.site.register(ProductModel, ProductAdmin)
 admin.site.register(CompanyModel, CompanyAdmin)
+admin.site.register(ServiceModel, ServiceAdmin)

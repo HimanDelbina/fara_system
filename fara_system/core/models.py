@@ -52,3 +52,21 @@ class CompanyModel(models.Model):
     class Meta:
         verbose_name_plural = "عکس کمپانی ها در صفحه دوم"
         verbose_name = "عکس کمپانی در صفحه دوم"
+        
+class ServiceModel(models.Model):
+    name = models.CharField(max_length=100, verbose_name='نام سرویس')
+    image = models.ImageField(
+        null=True, blank=True, upload_to='project_image', verbose_name='تصویر سرویس')
+
+    def __str__(self):
+        return self.name
+
+    def image_tag(self):
+        return mark_safe('<img src="{}" width="100" height="100"/>'.format(self.image.url))
+
+    image_tag.short_description = 'Image'
+    image_tag.allow_tags = True
+
+    class Meta:
+        verbose_name_plural = "عکس سرویس ها در صفحه اول"
+        verbose_name = "عکس سرویس در صفحه اول"

@@ -6,5 +6,6 @@ from .models import *
 def home(request):
     product_data = ProductModel.objects.all()
     company_data = CompanyModel.objects.all()
-    context = {'product_data': product_data, 'company_data':company_data}
+    service_data = ServiceModel.objects.all()
+    context = {'product_data': product_data, 'company_data':company_data,"service_data":service_data}
     return render(request, "core/home.html", context)
