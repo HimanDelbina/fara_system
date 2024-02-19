@@ -123,7 +123,46 @@
 </section>
 
 <section>
-    <div class="sec_tab"></div>
+    <div class="sec_tab">
+        <div class="sec_tab_top">
+
+   
+                <div class="button_container">
+                    <button onclick="showPanel(0,'#FFFFFF')">برنامه نویسی</button>
+                    <button onclick="showPanel(1,'#FFFFFF')">شبکه</button>
+                    <button onclick="showPanel(2,'#FFFFFF')">دوربین</button>
+                 
+                </div>
+    
+         
+        </div>
+        <div class="sec_tab_down">
+            <div class="tab_panel">Tab 1 : Content</div>
+            <div class="tab_panel">Tab 2 : Content</div>
+            <div class="tab_panel">
+                <div class="camera_grid">
+                 {% for data in camera_filter %}
+                 
+                    
+                 <div class="camera_grid_item">
+                    <div class="camera_grid_item_top">
+                        <img src="{{data.logo.url}}" alt class="camera_grid_logo">
+                    </div>
+                    <div class="camera_grid_item_down">
+                        <img src="{{data.image.url}}" alt class="camera_grid_img">
+                        <p class="camera_title">{{data.title}}</p>
+                    </div>
+                   
+                 </div>
+                    
+                 {% endfor %}
+                </div>
+            </div>
+                <!-- <div class="tab_panel">Tab 3 : Content</div> -->
+         
+           
+        </div>
+    </div>
 </section>
 
 {% endblock home %}

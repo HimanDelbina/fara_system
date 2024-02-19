@@ -19,7 +19,7 @@ def news_image_path(instance, filename):
 class ProductModel(models.Model):
     name = models.CharField(max_length=100, verbose_name='نام محصول')
     image = models.ImageField(
-        null=True, blank=True, upload_to='project_image', verbose_name='تصویر محصول')
+        null=True, blank=True, upload_to='product_image', verbose_name='تصویر محصول')
 
     def __str__(self):
         return self.name
@@ -38,7 +38,7 @@ class ProductModel(models.Model):
 class CompanyModel(models.Model):
     name = models.CharField(max_length=100, verbose_name='نام کمپانی')
     image = models.ImageField(
-        null=True, blank=True, upload_to='project_image', verbose_name='تصویر کمپانی')
+        null=True, blank=True, upload_to='company_image', verbose_name='تصویر کمپانی')
 
     def __str__(self):
         return self.name
@@ -56,7 +56,7 @@ class CompanyModel(models.Model):
 class ServiceModel(models.Model):
     name = models.CharField(max_length=100, verbose_name='نام سرویس')
     image = models.ImageField(
-        null=True, blank=True, upload_to='project_image', verbose_name='تصویر سرویس')
+        null=True, blank=True, upload_to='service_image', verbose_name='تصویر سرویس')
 
     def __str__(self):
         return self.name
@@ -70,3 +70,49 @@ class ServiceModel(models.Model):
     class Meta:
         verbose_name_plural = "عکس سرویس ها در صفحه اول"
         verbose_name = "عکس سرویس در صفحه اول"
+   
+   
+   
+        
+class AbilityCameraModel(models.Model):
+    name = models.CharField(max_length=50 , verbose_name='مدل دوربین' )
+    ability = models.CharField(max_length=50, verbose_name='قابلیت دوربین')
+    
+    def __str__(self):
+        return self.name
+    
+    class Meta:
+        verbose_name_plural = "قابلیت دوربین ها"
+        verbose_name = "قابلیت دوربین"
+        
+        
+class CameraModel(models.Model):
+    name = models.CharField(max_length=100, verbose_name='شرکت سازنده دوربین')
+    title = models.CharField(max_length=40 , verbose_name='مدل دوربین')
+    image = models.ImageField(
+        null=True, blank=True, upload_to='camera_image', verbose_name='تصویر دوربین')
+    logo = models.ImageField(null=True, blank=True, upload_to='logo_image', verbose_name='لوگو شرکت سازنده')
+    video = models.FileField(upload_to='video', max_length=100,null=True, blank=True)
+    country = models.CharField(max_length=30,verbose_name='نام کشور سازنده',null = True, blank = True)
+    description = models.TextField(verbose_name='توضیحات',null = True, blank = True)
+    ability = models.ManyToManyField(AbilityCameraModel, verbose_name="قابلیت های دوربین")
+    
+    
+
+    def __str__(self):
+        return self.name
+
+    def image_tag(self):
+        return mark_safe('<img src="{}" width="100" height="100"/>'.format(self.image.url))
+    def logo_tag(self):
+        return mark_safe('<img src="{}" width="100" height="100"/>'.format(self.logo.url))
+
+    image_tag.short_description = 'Image'
+    image_tag.allow_tags = True
+    
+    logo_tag.short_description = 'Logo'
+    logo_tag.allow_tags = True
+
+    class Meta:
+        verbose_name_plural = "دوربین ها"
+        verbose_name = "دوربین"
