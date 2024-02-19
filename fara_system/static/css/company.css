@@ -24,7 +24,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(8, 0, 255);
+  /* background-color: rgb(8, 0, 255); */
 }
 
 .grid {

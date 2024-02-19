@@ -100,13 +100,11 @@
 }
 
 .camera_grid_item:hover {
-    background: #03061E;
+    background: #e0e4e6;
     cursor: pointer;
-    color: #ffffff;
 }
 
 .camera_title {
-    /* font-weight: bold; */
     font-size: 12px;
     transition-duration: 200ms;
     font-family: "Anton", sans-serif;

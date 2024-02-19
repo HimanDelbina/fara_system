@@ -1,0 +1,75 @@
+.programm {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.programm_top {
+    flex-grow: 1;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    /* background-color: brown; */
+}
+
+.programm_down {
+    height: 7rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: blue; */
+}
+
+
+/* Tooltip container */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.avatar {
+    position: relative;
+}
+
+.avatar::before,
+.avatar::after {
+    --scale: 0;
+    --arrow-size: 10px;
+    --tooltip-color: rgb(5, 5, 5);
+    position: absolute;
+    top: -0.25rem;
+    left: 70%;
+    transform: translateX(-50%) translateY(var(--translate-y, 0)) scale(var(--scale));
+    transition: 150ms transform;
+    transform-origin: bottom center;
+}
+
+.avatar::before {
+    --translate-y: calc(-100% - var(--arrow-size));
+    content: attr(data-tooltip);
+    color: white;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    text-align: center;
+    width: max-content;
+    max-width: auto;
+    /* max-width: 100%; */
+    background: var(--tooltip-color);
+}
+
+.avatar:hover::before,
+.avatar:hover::after {
+    --scale: 0.8;
+}
+
+.avatar::after {
+    --translate-y: calc(-1 * var(--arrow-size));
+    content: '';
+    border: var(--arrow-size) solid transparent;
+    border-top-color: var(--tooltip-color);
+    transform-origin: top center;
+}

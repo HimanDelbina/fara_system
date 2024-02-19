@@ -15,6 +15,10 @@ class ServiceAdmin(admin.ModelAdmin):
     fields = ['name', 'image']
     list_display = ['name', 'image_tag']
     
+class ProgramAdmin(admin.ModelAdmin):
+    fields = ['name', 'image']
+    list_display = ['name', 'image_tag']
+    
 class AbilityCameraAdmin(admin.ModelAdmin):
     fields = ['name', 'ability']
     list_display = ['name', 'ability']
@@ -29,3 +33,4 @@ admin.site.register(CompanyModel, CompanyAdmin)
 admin.site.register(ServiceModel, ServiceAdmin)
 admin.site.register(CameraModel, CameraAdmin)
 admin.site.register(AbilityCameraModel, AbilityCameraAdmin)
+admin.site.register(ProgramModel, ProgramAdmin)
