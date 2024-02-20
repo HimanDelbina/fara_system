@@ -1,0 +1,61 @@
+
+
+.more_camera_grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 10px;
+    padding: 50px;
+}
+
+.more_camera_grid_item {
+    background: #F5F7F8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    transition-duration: 200ms;
+}
+
+.more_camera_grid_item_top {
+    height: 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    padding-left: 20px;
+}
+
+.more_camera_grid_item_down {
+    flex-grow: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.more_camera_grid_img {
+    height: 140px;
+    transition-duration: 200ms;
+}
+
+.more_camera_grid_logo {
+    height: 50px;
+    transition-duration: 200ms;
+}
+
+.more_camera_grid_item:hover {
+    background: #e0e4e6;
+    cursor: pointer;
+}
+
+.more_camera_title {
+    font-size: 12px;
+    transition-duration: 200ms;
+    font-family: "Anton", sans-serif;
+    padding-bottom: 10px;
+}
+

@@ -26,3 +26,15 @@ def home(request):
         "program_data": program_data,
     }
     return render(request, "core/home.html", context)
+
+
+def more_camera(request):
+    camera_data = CameraModel.objects.all()
+    context = {"camera_data": camera_data}
+    return render(request, "core/morecamera.html", context)
+
+
+def details_camera(request):
+    camera_data = CameraModel.objects.all()
+    context = {"camera_data": camera_data}
+    return render(request, "core/details_camera.html", context)

@@ -14,12 +14,24 @@
 }
 
 .programm_down {
-    height: 7rem;
+    height: 5rem;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     /* background-color: blue; */
+}
+
+.program_img {
+    height: 35px;
+    padding-left: 15px;
+    position: relative;
+    transition: 0.5s;
+    /* margin: 5px; */
+}
+
+.program_img:hover {
+    top: 5px;
 }
 
 
@@ -72,4 +84,24 @@
     border: var(--arrow-size) solid transparent;
     border-top-color: var(--tooltip-color);
     transform-origin: top center;
+}
+
+
+/* Divider */
+
+
+.divider {
+    position: relative;
+    height: 0.5px;
+}
+
+.div-transparent:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 5%;
+    right: 5%;
+    width: 90%;
+    height: 1px;
+    background-image: linear-gradient(to right, transparent, rgb(48, 49, 51), transparent);
 }

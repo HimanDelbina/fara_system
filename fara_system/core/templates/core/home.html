@@ -1,18 +1,22 @@
 {% extends './main.html' %} {% block home %}{% load static %}
-
 <section>
     <div class="sec_home">
         <header>
             <nav>
                 <ul>
-                    <li><a href="#" class="nav-link">صفحه اصلی</a></li>
-                    <li><a href="#" class="nav-link">درباره ما</a></li>
-                    <li><a href="#" class="nav-link">تماس با ما</a></li>
+                    <li>
+                        <a href="#" class="nav-link">صفحه اصلی</a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link">درباره ما</a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link">تماس با ما</a>
+                    </li>
                 </ul>
             </nav>
         </header>
-        <div class="sec_home_body">
-        </div>
+        <div class="sec_home_body"></div>
         <div class="sec_home_down">
             {% for data in service_data %}
             <div class="service_data">
@@ -40,7 +44,7 @@
             </div> -->
         </div>
     </div>
-    </div>
+</div>
 </section>
 <section>
     <div class="sec_project">
@@ -68,7 +72,7 @@
     <div class="sec_stunnig">
         <div class="expanding-flex-cards">
             <div class="expanding-flex-cards-item active">
-                <img src="static/image/1.png" alt="" class="expanding-flex-cards-item-img" />
+                <img src="static/image/1.png" alt="" class="expanding-flex-cards-item-img">
                 <div class="expanding-flex-cards-item-body">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                 </div>
@@ -78,7 +82,7 @@
                 </div>
             </div>
             <div class="expanding-flex-cards-item">
-                <img src="static/image/2.png" alt="" class="expanding-flex-cards-item-img" />
+                <img src="static/image/2.png" alt="" class="expanding-flex-cards-item-img">
                 <div class="expanding-flex-cards-item-body">
                     <p>Lorem ipsum dolor sit amet consectetur.</p>
                 </div>
@@ -88,7 +92,7 @@
                 </div>
             </div>
             <div class="expanding-flex-cards-item">
-                <img src="static/image/3.png" alt="" class="expanding-flex-cards-item-img" />
+                <img src="static/image/3.png" alt="" class="expanding-flex-cards-item-img">
                 <div class="expanding-flex-cards-item-body">
                     <p>Lorem ipsum dolor sit amet.</p>
                 </div>
@@ -98,7 +102,7 @@
                 </div>
             </div>
             <div class="expanding-flex-cards-item">
-                <img src="static/image/1.png" alt="" class="expanding-flex-cards-item-img" />
+                <img src="static/image/1.png" alt="" class="expanding-flex-cards-item-img">
                 <div class="expanding-flex-cards-item-body">
                     <p>Lorem ipsum dolor sit amet consectetur.</p>
                 </div>
@@ -108,7 +112,7 @@
                 </div>
             </div>
             <div class="expanding-flex-cards-item">
-                <img src="static/image/2.png" alt="" class="expanding-flex-cards-item-img" />
+                <img src="static/image/2.png" alt="" class="expanding-flex-cards-item-img">
                 <div class="expanding-flex-cards-item-body">
                     <p>Lorem ipsum dolor sit.</p>
                 </div>
@@ -118,10 +122,8 @@
                 </div>
             </div>
         </div>
-
     </div>
 </section>
-
 <section>
     <div class="sec_tab">
         <div class="sec_tab_top">
@@ -135,29 +137,41 @@
             <div class="tab_panel">
                 <div class="programm">
                     <div class="programm_top"></div>
-                    <div class="programm_down"></div>
+                    <div class="programm_down">
+                        {% for data in program_data %}
+                        <div data-text="Thanks for hovering! I'm a tooltip" class="tooltip">
+                            <div class="avatar" data-tooltip="{{data.name}}">
+                                <a >
+                                    <img class="program_img" src="{{data.image.url}}" alt>
+                                </a>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
                 </div>
             </div>
+            <div class="tab_panel"></div>
             <div class="tab_panel">
-
-            </div>
-            <div class="tab_panel">
-                <div class="camera_grid">
-                    {% for data in camera_filter %}
-                    <div class="camera_grid_item">
-                        <div class="camera_grid_item_top">
-                            <img src="{{data.logo.url}}" alt class="camera_grid_logo">
+                <div class="camera_page">
+                    <div class="camera_grid">
+                        {% for data in camera_filter %}
+                        <div class="camera_grid_item">
+                            <div class="camera_grid_item_top">
+                                <img src="{{data.logo.url}}" alt class="camera_grid_logo">
+                            </div>
+                            <div class="camera_grid_item_down">
+                                <img src="{{data.image.url}}" alt class="camera_grid_img">
+                                <p class="camera_title">{{data.title}}</p>
+                            </div>
                         </div>
-                        <div class="camera_grid_item_down">
-                            <img src="{{data.image.url}}" alt class="camera_grid_img">
-                            <p class="camera_title">{{data.title}}</p>
-                        </div>
+                        {% endfor %}
                     </div>
-                    {% endfor %}
+                    <div class="load_more_camera">
+                        <a class="load_more_camera_title" href="{% url 'more_camera' %}"> ..... موارد بیشتر</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-
 {% endblock home %}

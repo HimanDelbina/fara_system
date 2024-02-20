@@ -52,8 +52,15 @@
     padding: 10px 100px 10px 100px;
 }
 
+.camera_page {
+    display: flex;
+    flex-direction: column;
+
+}
+
 .camera_grid {
-    width: 100%;
+    /* width: 100%; */
+    flex-grow: 1;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-gap: 10px;
@@ -109,4 +116,25 @@
     transition-duration: 200ms;
     font-family: "Anton", sans-serif;
     padding-bottom: 10px;
+}
+
+.load_more_camera {
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.load_more_camera_title {
+    color: blue;
+    font-size: 15px;
+    font-weight: normal;
+    transition-duration: 200ms;
+}
+
+.load_more_camera_title:hover {
+    color: #03061E;
+    cursor: pointer;
+    font-weight: bold;
 }

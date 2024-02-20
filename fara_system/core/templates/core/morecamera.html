@@ -1,0 +1,19 @@
+{% extends './main.html' %} {% block camera %}{% load static %}
+
+<section>
+    <div class="more_camera_grid">
+        {% for data in camera_data %}
+        <div class="more_camera_grid_item">
+            <div class="more_camera_grid_item_top">
+                <img src="{{data.logo.url}}" alt class="more_camera_grid_logo">
+            </div>
+            <div class="more_camera_grid_item_down">
+                <img src="{{data.image.url}}" alt class="more_camera_grid_img">
+                <p class="more_camera_title">{{data.title}}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+{% endblock camera %}
