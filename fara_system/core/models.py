@@ -161,3 +161,15 @@ class ProgramModel(models.Model):
     class Meta:
         verbose_name_plural = "عکس زبان برنامه نویسی"
         verbose_name = "عکس زبان برنامه نویسی"
+
+
+class ActivityModel(models.Model):
+    name = models.CharField(max_length=100, verbose_name="فعالیت ها")
+    description = models.TextField(verbose_name="توضیحات فعالیت ها",null=True, blank=True)
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name_plural = "فعالیت ها"
+        verbose_name = "فعالیت ها"

@@ -10,6 +10,7 @@ def home(request):
     service_data = ServiceModel.objects.all()
     camera_data = CameraModel.objects.all()
     program_data = ProgramModel.objects.all()
+    activity_data = ActivityModel.objects.all()
     camera_filter = []
     count = 0
     for data in camera_data:
@@ -24,6 +25,7 @@ def home(request):
         "camera_data": camera_data,
         "camera_filter": camera_filter,
         "program_data": program_data,
+        "activity_data": activity_data,
     }
     return render(request, "core/home.html", context)
 

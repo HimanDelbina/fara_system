@@ -1,0 +1,9 @@
+.sec_fotter {
+    height: 50vh;
+    width: 100vw;
+    background-color: #03061E;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,46 @@
+.sec_text {
+    height: 100vh;
+    width: 100vw;
+    background-color: #F5F7F8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.text_top {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 100px;
+    text-align: center;
+    direction: rtl;
+}
+
+.text_down {
+    height: 12rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* background-color: #03061E; */
+}
+
+.text_des {
+    font-family: vazir;
+    font-size: 20px;
+    color: #414141;
+}
+.text_title {
+    font-family: vazir;
+    font-size: 30px;
+    font-weight: bold;
+    color: #03061E;
+}
+
+.product_img{
+    height: 70px;
+    padding-left: 50px;
+}
