@@ -187,7 +187,7 @@ nav ul li a {
 }
 
 .service_img {
-    height: 25px;
+    height: 30px;
     /* background-color: rgb(244, 244, 255); */
     /* border-radius: 100px; */
     padding: 5px;
@@ -207,4 +207,169 @@ nav ul li a {
     color: #ffffff;
     font-family: vazir;
     font-size: small;
+}
+
+
+/* animation text */
+h2 {
+    position: relative;
+    font-size: 50px;
+    color: rgb(255, 255, 255);
+    -webkit-text-stroke: 0.1px #ececec;
+    text-transform: uppercase;
+    font-family: vazir;
+}
+
+h2::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    /* font-size: 50px; */
+    color: #03061E;
+    -webkit-text-stroke: 0vw #b3b3b3;
+    border-right: 1px solid #03061E;
+    overflow: hidden;
+    animation: animate 6s linear infinite;
+}
+
+@keyframes animate {
+
+    0%,
+    10%,
+    100% {
+        width: 0;
+    }
+
+    70%,
+    90% {
+        width: 100%;
+    }
+}
+
+/* animation background */
+.absolute {
+    position: absolute;
+    top: 50px !important;
+    inset: 0;
+    justify-content: center;
+    display: inline-flex;
+    flex-direction: row;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.bg-shape1 {
+    width: 400px;
+    height: 400px;
+    border-radius: 9999px;
+    position: relative;
+    animation: one 10s infinite;
+}
+
+.bg-shape2 {
+    width: 300px;
+    height: 300px;
+    border-radius: 9999px;
+    position: relative;
+    animation: two 10s infinite;
+}
+
+@keyframes one {
+    0% {
+        left: 0px;
+        top: 0px;
+    }
+
+    25% {
+        left: -100px;
+        top: 70px;
+    }
+
+    50% {
+        left: 20px;
+        top: 150px;
+    }
+
+    75% {
+        left: 50px;
+        top: 100px;
+    }
+
+    100% {
+        left: 0px;
+        top: 0px;
+    }
+}
+
+@keyframes two {
+    0% {
+        left: 0px;
+        top: 0px;
+    }
+
+    25% {
+        left: 50px;
+        top: 10px;
+    }
+
+    50% {
+        left: 100px;
+        top: 50px;
+    }
+
+    75% {
+        left: 50px;
+        top: 100px;
+    }
+
+    100% {
+        left: 0px;
+        top: 0px;
+    }
+}
+
+.opacity-50 {
+    opacity: 0.5;
+}
+
+.bg-blur {
+    filter: blur(99px);
+}
+
+.bg-primary {
+    background-color: rgba(0, 0, 255, 0.137);
+}
+
+.bg-teal {
+    background-color: rgba(47, 0, 255, 0.486);
+}
+
+.bg-purple {
+    background-color: rgba(187, 255, 0, 0.267);
+}
+
+
+
+.body_top {
+    height: 4rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.body_down {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.body_down_img{
+    height: 700px;
 }
