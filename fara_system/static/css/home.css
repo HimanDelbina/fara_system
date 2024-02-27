@@ -4,8 +4,8 @@
     background-color: rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    /* align-items: center;
+    justify-content: center; */
 }
 
 .sec_home_header {
@@ -27,11 +27,15 @@
 
 .sec_home_body {
     flex-grow: 1;
+    /* height: 35rem;
+    width: 100%; */
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 40px;
+    background-color: #ffffff;
+    position: relative;
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* margin: 40px; */
 }
 
 header {
@@ -209,46 +213,6 @@ nav ul li a {
     font-size: small;
 }
 
-
-/* animation text */
-h2 {
-    position: relative;
-    font-size: 50px;
-    color: rgb(255, 255, 255);
-    -webkit-text-stroke: 0.1px #ececec;
-    text-transform: uppercase;
-    font-family: vazir;
-}
-
-h2::before {
-    content: attr(data-text);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    /* font-size: 50px; */
-    color: #03061E;
-    -webkit-text-stroke: 0vw #b3b3b3;
-    border-right: 1px solid #03061E;
-    overflow: hidden;
-    animation: animate 6s linear infinite;
-}
-
-@keyframes animate {
-
-    0%,
-    10%,
-    100% {
-        width: 0;
-    }
-
-    70%,
-    90% {
-        width: 100%;
-    }
-}
-
 /* animation background */
 .absolute {
     position: absolute;
@@ -259,23 +223,24 @@ h2::before {
     flex-direction: row;
 }
 
+
 .justify-center {
     justify-content: center;
 }
 
 .bg-shape1 {
+    position: relative;
     width: 400px;
     height: 400px;
     border-radius: 9999px;
-    position: relative;
     animation: one 10s infinite;
 }
 
 .bg-shape2 {
+    position: relative;
     width: 300px;
     height: 300px;
     border-radius: 9999px;
-    position: relative;
     animation: two 10s infinite;
 }
 
@@ -342,20 +307,87 @@ h2::before {
 }
 
 .bg-primary {
-    background-color: rgba(0, 0, 255, 0.137);
+    background-color: rgba(255, 0, 0, 0.25);
 }
 
 .bg-teal {
-    background-color: rgba(47, 0, 255, 0.486);
+    background-color: rgba(47, 0, 255, 0.278);
 }
 
 .bg-purple {
-    background-color: rgba(187, 255, 0, 0.267);
+    background-color: rgba(187, 255, 0, 0.239);
 }
 
 
+/* animation text */
+h2 {
+    position: relative;
+    font-size: 50px;
+    color: rgb(255, 255, 255);
+    -webkit-text-stroke: 0.1px #ececec;
+    text-transform: uppercase;
+    font-family: vazir;
+}
 
-.body_top {
+h2::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    /* font-size: 50px; */
+    color: #03061E;
+    -webkit-text-stroke: 0vw #b3b3b3;
+    border-right: 1px solid #03061E;
+    overflow: hidden;
+    animation: animate 6s linear infinite;
+
+}
+
+@keyframes animate {
+
+    0%,
+    10%,
+    100% {
+        width: 0;
+    }
+
+    70%,
+    90% {
+        width: 100%;
+    }
+}
+
+
+/* center body */
+.body_on_background {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.body_on_background img {
+    height: 600px;
+}
+
+
+.body_on_background h2 {
+    font-family: vazir;
+    font-size: 50px;
+}
+
+.body_on_background_left {
+    display: flex;
+    flex-direction: column;
+    /* background-color: #3c3c3c; */
+}
+
+.body_on_background_left_top {
     height: 4rem;
     width: 100%;
     display: flex;
@@ -363,8 +395,23 @@ h2::before {
     align-items: center;
 }
 
-.body_down {
+.body_on_background_left_down {
     flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.body_on_background_description {
+    font-family: vazir;
+    direction: rtl;
+    color: #3c3c3c;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+    text-align: center;
+}
+
+.body_on_background_follow_body {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -373,4 +420,27 @@ h2::before {
 
 .body_down_img {
     height: 700px;
+}
+
+.body_on_background_follow {
+    height: 50px;
+    width: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #0022ff;
+    border-radius: 5px;
+    transition: all 0.2s ease-in-out;
+}
+
+.body_on_background_follow:hover {
+    background-color: #000d63;
+    cursor: pointer;
+}
+
+.body_on_background_follow p {
+    font-family: vazir;
+    color: #000000;
+    font-weight: bold;
 }

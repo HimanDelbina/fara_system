@@ -1,36 +1,74 @@
 {% extends './main.html' %} {% block home %}{% load static %}
 <section>
-    <div class="sec_home">
-        <header>
-            <nav>
-                <ul>
-                    <li>
-                        <a href="#" class="nav-link">صفحه اصلی</a>
-                    </li>
-                    <li>
-                        <a href="#" class="nav-link">درباره ما</a>
-                    </li>
-                    <li>
-                        <a href="#" class="nav-link">تماس با ما</a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
+    <div class="sec_home1">
+        <div class="sec_home1_top">
+            <!-- <video autoplay muted loop id="myVideo">
+                <source src="static/video/home.mp4" type="video/mp4">
+            </video> -->
+            <!-- <video loop muted autoplay playsinline poster="">
+                <source src="static/video/home.mp4" type="video/mp4">
+            </video>
+            <div class="sec_home1_top_color"></div>
+            <div class="sec_home1_top_front">
+                <p>Fara System</p>
+            </div> -->
+        </div>
+        <div class="sec_home1_down">
+            <div class="home_down_grid">
+                <div class="home_down_grid_item"></div>
+                <div class="home_down_grid_item"></div>
+                <div class="home_down_grid_item"></div>
+                <div class="home_down_grid_item"></div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="sec_home">
+        <div class="sec_home_header">
+            <header>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="#" class="nav-link">صفحه اصلی</a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link">درباره ما</a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link">تماس با ما</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
         <div class="sec_home_body">
-            <div class="sec_absolute">
-
-                <div class="absolute">
-                    <div class="absolute inset-0 justify-center">
-                        <div class="bg-shape1 bg-teal opacity-50 bg-blur"></div>
-                        <div class="bg-shape2 bg-primary opacity-50 bg-blur"></div>
-                        <div class="bg-shape1 bg-purple opacity-50 bg-blur"></div>
-                    </div>
-                    <div class="body_top">
+            <div class="absolute">
+                <div class="absolute inset-0 justify-center">
+                    <div class="bg-shape1 bg-teal opacity-50 bg-blur"></div>
+                    <div class="bg-shape2 bg-primary opacity-50 bg-blur"></div>
+                    <div class="bg-shape1 bg-purple opacity-50 bg-blur"></div>
+                </div>
+            </div>
+            <div class="body_on_background">
+                <div class="body_on_background_left">
+                    <div class="body_on_background_left_top">
                         <h2 data-text="فراسیستم">فراسیستم</h2>
                     </div>
-                    <div class="body_down">
-                        <img src="static/image/home1.png" alt="" class="body_down_img">
+                    <div class="body_on_background_left_down">
+                        <p class="body_on_background_description">
+                            ما در حوزه‌های دوربین مداربسته، شبکه، و برنامه‌نویسی فعالیت داریم. با استفاده از تجربه و تخصص، به ارائه راهکارهایی سریع و موثر برای نیازهای شما می‌پردازیم.
+                            با ما همراه شوید و از جدیدترین فناوری‌ها و خدمات بهره‌مند شوید.
+                        </p>
+                        <div class="body_on_background_follow_body">
+                            <div class="body_on_background_follow">
+                                <p>
+                                    ارتباط با ما
+                                </p>
+                            </div>
+                        </div>
                     </div>
+                </div>
+                <div class="body_down">
+                    <img src="static/image/home1.png" alt="">
                 </div>
             </div>
         </div>
@@ -44,7 +82,7 @@
             </div>
             {% endfor %}
         </div>
-    </div>
+    </div> -->
     </div>
 </section>
 <section>
@@ -175,7 +213,23 @@
         <div class="sec_tab_down">
             <div class="tab_panel">
                 <div class="programm">
-                    <div class="programm_top"></div>
+                    <div class="programm_top">
+                        <p class="programm_description">
+                            در فرا سیستم، افتخار داریم که به عنوان یکی از پیشروهای صنعت فناوری اطلاعات و برنامه نویسی،
+                            در خدمت شما هستیم. از زمان تأسیس تاکنون، ماموریت ما همواره به عنوان یک تیم ارائه دهنده‌ی
+                            راهکارهای نرم‌افزاری متمرکز بر کیفیت، کارآیی و نوآوری بوده است.
+                            در فرا سیستم، ما به ایجاد راهکارهای نرم‌افزاری سفارشی برای مشتریان از صنایع مختلف
+                            می‌پردازیم. با توجه به نیازهای منحصر به فرد هر مشتری، تیم ما از تجربه و تخصص خود برای
+                            ارائه‌ی راهکارهایی بر اساس فناوری‌های مدرن استفاده می‌کند که به بهبود عملکرد و رشد کسب و کار
+                            شما کمک می‌کند.
+                            ما با اعتقاد به ارزش‌های مشترک و شراکت درازمدت، با همکاری و هماهنگی نزدیک با مشتریانمان، به
+                            دنبال رسیدن به اهداف مشترک هستیم. هدف ما ارائه‌ی راهکارهایی است که نه تنها نیازهای فعلی شما
+                            را برآورده می‌کند، بلکه به شما امکان می‌دهد تا در مقابل چالش‌های آینده نیز مقاومت کنید و رشد
+                            خود را ادامه دهید.
+                            از اینکه شما را در مسیر دیجیتالی خود همراهی می‌کنیم، خوشحالیم و امیدواریم که با ارائه‌ی
+                            خدماتی بی‌نظیر، ارتباط مثمر و تعامل مستمر، بتوانیم شما را در رسیدن به اهدافتان یاری نماییم.
+                        </p>
+                    </div>
                     <div class="programm_down">
                         {% for data in program_data %}
                         <div data-text="Thanks for hovering! I'm a tooltip" class="tooltip">

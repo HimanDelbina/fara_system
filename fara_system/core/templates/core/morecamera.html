@@ -1,5 +1,12 @@
 {% extends './main.html' %} {% block camera %}{% load static %}
 <section>
+    {% comment %} <div class="camera_filter">
+        {% for data in camera_company_data %}
+        <p>
+            <a class="company_filter_title" href="/more_camera/?category={{cat.id}}">{{data.name}}</a>
+        </p>
+        {% endfor %}
+    </div> {% endcomment %}
     <div class="more_camera_grid">
         {% for data in camera_data %}
         <div class="more_camera_grid_item">

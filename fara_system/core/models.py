@@ -62,6 +62,17 @@ class CompanyModel(models.Model):
         verbose_name = "عکس کمپانی در صفحه دوم"
 
 
+class CameraCategoryModel(models.Model):
+    name = models.CharField(max_length=100, verbose_name="نام کمپانی سازنده دوربین")
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name_plural = "عکس کمپانی های سازنده دوربین"
+        verbose_name = "عکس کمپانی سازنده دوربین"
+
+
 class ServiceModel(models.Model):
     name = models.CharField(max_length=100, verbose_name="نام سرویس")
     image = models.ImageField(
@@ -97,7 +108,10 @@ class AbilityCameraModel(models.Model):
 
 
 class CameraModel(models.Model):
-    name = models.CharField(max_length=100, verbose_name="شرکت سازنده دوربین")
+    # name = models.CharField(max_length=100, verbose_name="شرکت سازنده دوربین")
+    category = models.ForeignKey(
+        CameraCategoryModel, verbose_name="شرکت سازنده دوربین", on_delete=models.CASCADE
+    )
     title = models.CharField(max_length=40, verbose_name="مدل دوربین")
     image = models.ImageField(
         null=True, blank=True, upload_to="camera_image", verbose_name="تصویر دوربین"
@@ -113,9 +127,10 @@ class CameraModel(models.Model):
     ability = models.ManyToManyField(
         AbilityCameraModel, verbose_name="قابلیت های دوربین"
     )
+    is_publish = models.BooleanField(default=True, verbose_name="آیا نمایش دادده شود ؟")
 
     def __str__(self):
-        return self.name
+        return self.title
 
     def image_tag(self):
         return mark_safe(
@@ -165,7 +180,9 @@ class ProgramModel(models.Model):
 
 class ActivityModel(models.Model):
     name = models.CharField(max_length=100, verbose_name="فعالیت ها")
-    description = models.TextField(verbose_name="توضیحات فعالیت ها",null=True, blank=True)
+    description = models.TextField(
+        verbose_name="توضیحات فعالیت ها", null=True, blank=True
+    )
 
     def __str__(self):
         return self.name

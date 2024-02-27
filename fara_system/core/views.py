@@ -9,6 +9,7 @@ def home(request):
     company_data = CompanyModel.objects.all()
     service_data = ServiceModel.objects.all()
     camera_data = CameraModel.objects.all()
+    camera_company_data = CameraCategoryModel.objects.all()
     program_data = ProgramModel.objects.all()
     activity_data = ActivityModel.objects.all()
     camera_filter = []
@@ -26,13 +27,23 @@ def home(request):
         "camera_filter": camera_filter,
         "program_data": program_data,
         "activity_data": activity_data,
+        "camera_company_data": camera_company_data,
     }
     return render(request, "core/home.html", context)
 
 
 def more_camera(request):
     camera_data = CameraModel.objects.all()
-    context = {"camera_data": camera_data}
+    CATID = request.GET.get("category")
+    camera_company_data = CameraCategoryModel.objects.all()
+    if CATID:
+        camera_data = CameraModel.objects.filter(category=CATID)
+    else:
+        camera_data = CameraModel.objects.filter(is_publish=True)
+    context = {
+        "camera_data": camera_data,
+        "camera_company_data": camera_company_data,
+    }
     return render(request, "core/morecamera.html", context)
 
 

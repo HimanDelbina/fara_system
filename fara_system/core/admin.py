@@ -34,9 +34,14 @@ class ActivityAdmin(admin.ModelAdmin):
     list_display = ["name"]
 
 
+class CameraCategoryAdmin(admin.ModelAdmin):
+    fields = ["name"]
+    list_display = ["name"]
+
+
 class CameraAdmin(admin.ModelAdmin):
     fields = [
-        "name",
+        "category",
         "title",
         "image",
         "logo",
@@ -45,7 +50,10 @@ class CameraAdmin(admin.ModelAdmin):
         "description",
         "ability",
     ]
-    list_display = ["name", "title", "image_tag", "logo_tag"]
+    list_display = ["title", "category", "image_tag", "logo_tag"]
+
+    def camera_name(self, instance):
+        return instance.category.name
 
 
 admin.site.register(ProductModel, ProductAdmin)
@@ -55,3 +63,4 @@ admin.site.register(CameraModel, CameraAdmin)
 admin.site.register(AbilityCameraModel, AbilityCameraAdmin)
 admin.site.register(ProgramModel, ProgramAdmin)
 admin.site.register(ActivityModel, ActivityAdmin)
+admin.site.register(CameraCategoryModel, CameraCategoryAdmin)
