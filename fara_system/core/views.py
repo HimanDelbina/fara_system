@@ -51,3 +51,9 @@ def details_camera(request):
     camera_data = CameraModel.objects.all()
     context = {"camera_data": camera_data}
     return render(request, "core/details_camera.html", context)
+
+
+def camera_select(request,pk):
+    camera_data = CameraModel.objects.get(id=pk)
+    context = {"camera_data": camera_data}
+    return render(request, "core/camera_select.html", context)

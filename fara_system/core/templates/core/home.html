@@ -248,15 +248,17 @@
                 <div class="camera_page">
                     <div class="camera_grid">
                         {% for data in camera_filter %}
-                        <div class="camera_grid_item">
-                            <div class="camera_grid_item_top">
-                                <img src="{{data.logo.url}}" alt class="camera_grid_logo">
+                        <a href="/camera_select/{{data.id}}">
+                            <div class="camera_grid_item">
+                                <div class="camera_grid_item_top">
+                                    <img src="{{data.logo.url}}" alt class="camera_grid_logo">
+                                </div>
+                                <div class="camera_grid_item_down">
+                                    <img src="{{data.image.url}}" alt class="camera_grid_img">
+                                    <p class="camera_title">{{data.title}}</p>
+                                </div>
                             </div>
-                            <div class="camera_grid_item_down">
-                                <img src="{{data.image.url}}" alt class="camera_grid_img">
-                                <p class="camera_title">{{data.title}}</p>
-                            </div>
-                        </div>
+                        </a>
                         {% endfor %}
                     </div>
                     <div class="load_more_camera">

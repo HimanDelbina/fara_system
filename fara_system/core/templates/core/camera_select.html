@@ -1,0 +1,11 @@
+{% extends './main.html' %} {% block detailscamera %}{% load static %}
+<section>
+    <div class="camera_select">
+
+        <img src="{{camera_data.logo.url}}" alt class="camera_grid_logo">
+        <img src="{{camera_data.image.url}}" alt class="camera_grid_logo">
+        <p>{{camera_data.description}}</p>
+
+    </div>
+</section>
+{% endblock detailscamera %}
