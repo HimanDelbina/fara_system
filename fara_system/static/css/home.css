@@ -307,15 +307,15 @@ nav ul li a {
 }
 
 .bg-primary {
-    background-color: rgba(255, 0, 0, 0.25);
+    background-color: rgba(255, 0, 0, 0.171);
 }
 
 .bg-teal {
-    background-color: rgba(47, 0, 255, 0.278);
+    background-color: rgba(47, 0, 255, 0.192);
 }
 
 .bg-purple {
-    background-color: rgba(187, 255, 0, 0.239);
+    background-color: rgba(187, 255, 0, 0.178);
 }
 
 
@@ -366,9 +366,50 @@ h2::before {
     width: 100%;
     position: absolute;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
+}
+
+.home_des {
+    font-size: 20px;
+    font-weight: normal;
+    font-family: vazir;
+    color: #424242;
+    padding: 40px;
+    direction: rtl;
+    justify-content: center;
+}
+
+.contact_me {
+    height: 60px;
+    width: 150px;
+    margin-right: 40px;
+    color: #000000;
+    border-radius: 5px;
+    background-color: #F5F7F8;
+    border: 1px #c4c4c4 solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+.contact_me:hover{
+    border: 0px #000 solid;
+    background-color: #200092;
+    color: #ffffff;
+}
+
+.home_title {
+    font-size: 50px;
+    font-weight: bold;
+    font-family: vazir;
+    color: #03061E;
+    direction: rtl;
+    padding-right: 40px;
 }
 
 .body_on_background img {
@@ -403,11 +444,12 @@ h2::before {
 
 .body_on_background_description {
     font-family: vazir;
+    font-size: 20px;
     direction: rtl;
     color: #3c3c3c;
     justify-content: center;
     align-items: center;
-    margin: 50px;
+    margin: 100px;
     text-align: center;
 }
 
@@ -444,3 +486,107 @@ h2::before {
     color: #000000;
     font-weight: bold;
 }
+
+.body_on_background_top {
+    height: 40rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    /* background-color: #0022ff; */
+}
+
+.body_on_background_down {
+    flex-grow: 1;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    padding: 50px;
+    /* background-color: #ff0000; */
+}
+
+
+/* card home */
+.card p {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 20px;
+    color: #000000;
+    font-family: vazir;
+    direction: rtl;
+    padding-bottom: 10px;
+}
+
+.card p.small {
+    font-size: 14px;
+    font-family: vazir;
+    direction: rtl;
+    color: #383838;
+}
+
+.go-corner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    background-color: #03061E;
+    border-radius: 0 4px 0 32px;
+}
+
+.go-arrow {
+    margin-top: -4px;
+    margin-right: -4px;
+    color: white;
+    font-family: courier, sans;
+}
+
+.card1 {
+    display: block;
+    position: relative;
+    max-width: 262px;
+    background-color: #F5F7F8;
+    border-radius: 4px;
+    padding: 32px 24px;
+    margin: 12px;
+    text-decoration: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.card1:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -16px;
+    right: -16px;
+    background: #03061E;
+    height: 32px;
+    width: 32px;
+    border-radius: 32px;
+    transform: scale(1);
+    transform-origin: 50% 50%;
+    transition: transform 0.25s ease-out;
+}
+
+.card1:hover:before {
+    transform: scale(21);
+}
+
+.card1:hover p {
+    transition: all 0.3s ease-out;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.card1:hover h3 {
+    transition: all 0.3s ease-out;
+    color: #fff;
+}
+
+/* Style all font awesome icons */

@@ -190,3 +190,38 @@ class ActivityModel(models.Model):
     class Meta:
         verbose_name_plural = "فعالیت ها"
         verbose_name = "فعالیت ها"
+
+
+class CardHomeModel(models.Model):
+    name = models.CharField(max_length=100, verbose_name="سر تیتر")
+    description = models.TextField(verbose_name="توضیحات", null=True, blank=True)
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name_plural = "کادر صفحه اول"
+        verbose_name = "کادر صفحه اول"
+
+
+class SocialMediaModel(models.Model):
+    name = models.CharField(max_length=100, verbose_name="نام شبکه اجتماعی")
+    image = models.ImageField(
+        upload_to="program_image",
+        verbose_name="تصویر شبکه اجتماعی",
+    )
+
+    def __str__(self):
+        return self.name
+
+    def image_tag(self):
+        return mark_safe(
+            '<img src="{}" width="100" height="100"/>'.format(self.image.url)
+        )
+
+    image_tag.short_description = "Image"
+    image_tag.allow_tags = True
+
+    class Meta:
+        verbose_name_plural = "عکس شبکه اجتماعی"
+        verbose_name = "عکس شبکه اجتماعی"

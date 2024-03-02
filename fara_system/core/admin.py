@@ -22,6 +22,9 @@ class ServiceAdmin(admin.ModelAdmin):
 class ProgramAdmin(admin.ModelAdmin):
     fields = ["name", "image"]
     list_display = ["name", "image_tag"]
+class SocialMediaAdmin(admin.ModelAdmin):
+    fields = ["name", "image"]
+    list_display = ["name", "image_tag"]
 
 
 class AbilityCameraAdmin(admin.ModelAdmin):
@@ -32,6 +35,11 @@ class AbilityCameraAdmin(admin.ModelAdmin):
 class ActivityAdmin(admin.ModelAdmin):
     fields = ["name", "description"]
     list_display = ["name"]
+
+
+class CardHomeAdmin(admin.ModelAdmin):
+    fields = ["name", "description"]
+    list_display = ["name", "description"]
 
 
 class CameraCategoryAdmin(admin.ModelAdmin):
@@ -64,3 +72,5 @@ admin.site.register(AbilityCameraModel, AbilityCameraAdmin)
 admin.site.register(ProgramModel, ProgramAdmin)
 admin.site.register(ActivityModel, ActivityAdmin)
 admin.site.register(CameraCategoryModel, CameraCategoryAdmin)
+admin.site.register(CardHomeModel, CardHomeAdmin)
+admin.site.register(SocialMediaModel, SocialMediaAdmin)

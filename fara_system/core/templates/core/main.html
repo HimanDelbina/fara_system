@@ -2,41 +2,44 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="static/css/home.css" />
-        <link rel="stylesheet" href="static/css/home1.css" />
-        <link rel="stylesheet" href="static/css/company.css" />
-        <link rel="stylesheet" href="static/css/stunning.css" />
-        <link rel="stylesheet" href="static/css/tabs.css" />
-        <link rel="stylesheet" href="static/css/style.css" />
-        <link rel="stylesheet" href="static/css/programm.css" />
-        <link rel="stylesheet" href="static/css/more_camera.css" />
-        <link rel="stylesheet" href="static/css/details_camera.css" />
-        <link rel="stylesheet" href="static/css/text_page.css" />
-        <link rel="stylesheet" href="static/css/activity.css" />
-        <link rel="stylesheet" href="static/css/fotter.css" />
-        <script src="{% static 'fontawesomefree/js/all.min.js' %}"></script>
-        <link href="{% static 'fontawesomefree/css/all.min.css' %}"
-            rel="stylesheet" type="text/css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@200..700&display=swap"
-            rel="stylesheet">
 
-    </head>
-    <body>
-        {% block home %}{% endblock home %}
-        {% block camera %}{% endblock camera %}
-        {% block detailscamera %}{% endblock detailscamera %}
-        <script src="static/js/scroll.js"></script>
-        <script src="static/js/slider.js"></script>
-        <script src="static/js/tabs.js"></script>
-        <script src="static/js/card.js"></script>
-    </body>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="static/css/home.css" />
+    <link rel="stylesheet" href="static/css/home1.css" />
+    <link rel="stylesheet" href="static/css/company.css" />
+    <link rel="stylesheet" href="static/css/stunning.css" />
+    <link rel="stylesheet" href="static/css/tabs.css" />
+    <link rel="stylesheet" href="static/css/style.css" />
+    <link rel="stylesheet" href="static/css/programm.css" />
+    <link rel="stylesheet" href="static/css/more_camera.css" />
+    <link rel="stylesheet" href="static/css/details_camera.css" />
+    <link rel="stylesheet" href="static/css/text_page.css" />
+    <link rel="stylesheet" href="static/css/activity.css" />
+    <link rel="stylesheet" href="static/css/fotter.css" />
+    <script src="{% static 'fontawesomefree/js/all.min.js' %}"></script>
+    <link href="{% static 'fontawesomefree/css/all.min.css' %}" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@200..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@1,600&display=swap" rel="stylesheet">
+    
+</head>
+
+<body>
+    {% block home %}{% endblock home %}
+    {% block camera %}{% endblock camera %}
+    {% block detailscamera %}{% endblock detailscamera %}
+    <script src="static/js/scroll.js"></script>
+    <script src="static/js/slider.js"></script>
+    <script src="static/js/tabs.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</body>
+
 </html>
