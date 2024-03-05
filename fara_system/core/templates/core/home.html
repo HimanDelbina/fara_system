@@ -24,13 +24,17 @@
                     <img src="static/image/home_1.png" alt="">
                     <div class="home_des">
                         <p class="home_title">فرا سیستم</p>
-                        <p class="home_des"> ما در حوزه‌های دوربین مداربسته، شبکه، و برنامه‌نویسی فعالیت داریم. با
+                        <p class="home_des">
+                            ما در حوزه‌های دوربین مداربسته، شبکه، و برنامه‌نویسی فعالیت داریم. با
                             استفاده از تجربه و تخصص،
                             به ارائه راهکارهایی سریع و موثر برای نیازهای شما می‌پردازیم.
-                            با ما همراه شوید و از جدیدترین فناوری‌ها و خدمات بهره‌مند شوید.</p>
+                            با ما همراه شوید و از جدیدترین فناوری‌ها و خدمات بهره‌مند شوید.
+                        </p>
+                        <a href="{% url 'contact_me' %}">
                             <div class="contact_me">
                                 <p>ارتباط با ما</p>
                             </div>
+                        </a>
                     </div>
                     <!-- <dotlottie-player src="https://lottie.host/7401522f-2d8b-4049-ad18-eb0edb6af224/CE9lFrNlEH.json"
                         background="transparent" speed="1" style="width: 300px; height: 300px" direction="1"
@@ -120,7 +124,7 @@
             {% endfor %}
         </div>
     </div>
-    </div>
+</div>
 </section>
 <section>
     <div class="sec_project">
@@ -143,7 +147,6 @@
                 </div>
                 {% endfor %}
                 {% endif %}
-
             </div>
         </div>
     </div>
@@ -332,7 +335,6 @@
                 <p>تعدادی از مشتریان ما</p>
             </div>
             <div class="sec_activity_organ_down"></div>
-            <!-- <div class="sec_activity_organ_border"></div> -->
         </div>
     </div>
 </section>

@@ -1,0 +1,8 @@
+{% extends './main.html' %} {% block contact_me %}{% load static %}
+<section>
+    <form action="{% url 'contact_me' %}" , method="POST" , enctype="multipart/form-data">
+        {{form}}
+        <button>submit</button>
+    </form>
+</section>
+{% endblock contact_me %}

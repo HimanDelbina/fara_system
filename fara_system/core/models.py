@@ -225,3 +225,17 @@ class SocialMediaModel(models.Model):
     class Meta:
         verbose_name_plural = "عکس شبکه اجتماعی"
         verbose_name = "عکس شبکه اجتماعی"
+
+
+class ContactMeModel(models.Model):
+    username = models.CharField(max_length=50, verbose_name="نام")
+    email = models.CharField(max_length=50, verbose_name="ایمیل")
+    phone_number = models.CharField(max_length=50, verbose_name="شماره موبایل")
+    description = models.TextField(verbose_name="توضیحات")
+
+    def __str__(self):
+        return self.phone_number
+
+    class Meta:
+        verbose_name_plural = "ارتباط با ما"
+        verbose_name = "ارتباط با ما"

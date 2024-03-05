@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from .models import *
+from .forms import *
+from django.views.decorators.csrf import csrf_protect
 
 # Create your views here.
 
@@ -73,3 +75,14 @@ def camera_select(request, pk):
     camera_data = CameraModel.objects.get(id=pk)
     context = {"camera_data": camera_data}
     return render(request, "core/camera_select.html", context)
+
+
+@csrf_protect
+def contact_me(request):
+    if request.method == "POST":
+        form = UploadContactMe(request.POST, request.FILES)
+        print(request.FILES)
+        if form.is_valid():
+            form.save()
+        # return redirect(hoeme)
+    return render(request, "core/contact_me.html", {"form": UploadContactMe})

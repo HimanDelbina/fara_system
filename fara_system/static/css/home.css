@@ -397,7 +397,8 @@ h2::before {
     transition: all 0.2s ease-in-out;
     cursor: pointer;
 }
-.contact_me:hover{
+
+.contact_me:hover {
     border: 0px #000 solid;
     background-color: #200092;
     color: #ffffff;
