@@ -489,7 +489,7 @@ h2::before {
 }
 
 .body_on_background_top {
-    height: 40rem;
+    height: 45rem;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -501,10 +501,11 @@ h2::before {
 .body_on_background_down {
     flex-grow: 1;
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 10px;
-    padding: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    padding-left: 50px;
+    padding-right: 100px;
     /* background-color: #ff0000; */
 }
 
@@ -590,4 +591,163 @@ h2::before {
     color: #fff;
 }
 
-/* Style all font awesome icons */
+/* social_medai */
+
+.home_socialmedia_item {
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+}
+
+.home_socialmedia_item img {
+    height: 25px;
+    transition: all 0.2s ease-out;
+}
+
+.home_socialmedia_item img:hover {
+    height: 25px;
+    cursor: pointer;
+}
+
+/* 
+.social-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    padding-top: 50px;
+}
+
+.social-button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    width: 64px;
+    height: 64px;
+    text-decoration: none;
+    border-radius: 100%;
+    background: #F5F7F8;
+    text-align: center;
+}
+
+.social-button::after {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: 50%;
+    display: block;
+    width: 0;
+    height: 0;
+    border-radius: 100%;
+    transition: 0.3s;
+}
+
+.social-button:focus,
+.social-button:hover {
+    color: #fff;
+}
+
+.social-button:focus::after,
+.social-button:hover::after {
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+    margin-left: calc(-50% - 1px);
+}
+
+.social-button i,
+.social-button svg {
+    position: relative;
+    z-index: 1;
+    transition: 0.3s;
+}
+
+.social-button i {
+    font-size: 25.6px;
+}
+
+.social-button svg {
+    height: 40%;
+    width: 40%;
+}
+
+.social-button--mail {
+    color: #0072c6;
+}
+
+.social-button--mail::after {
+    background: #0072c6;
+}
+
+.social-button--facebook {
+    color: #3b5999;
+}
+
+.social-button--facebook::after {
+    background: #3b5999;
+}
+
+.social-button--linkedin {
+    color: #0077b5;
+}
+
+.social-button--linkedin::after {
+    background: #0077b5;
+}
+
+.social-button--github {
+    color: #6e5494;
+}
+
+.social-button--github::after {
+    background: #6e5494;
+}
+
+.social-button--codepen {
+    color: #212121;
+}
+
+.social-button--codepen::after {
+    background: #212121;
+}
+
+.social-button--steam {
+    color: #7da10e;
+}
+
+.social-button--steam::after {
+    background: #7da10e;
+}
+
+.social-button--snapchat {
+    color: #eec900;
+}
+
+.social-button--snapchat::after {
+    background: #eec900;
+}
+
+.social-button--twitter {
+    color: #55acee;
+}
+
+.social-button--twitter::after {
+    background: #55acee;
+}
+
+.social-button--instagram {
+    color: #e4405f;
+}
+
+.social-button--instagram::after {
+    background: #e4405f;
+}
+
+.social-button--npmjs {
+    color: #c12127;
+}
+
+.social-button--npmjs::after {
+    background: #c12127;
+} */

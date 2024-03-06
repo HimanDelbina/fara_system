@@ -17,9 +17,7 @@ def home(request):
     social_media = SocialMediaModel.objects.all()
     camera_filter = []
     Card_filter = []
-    company_filter = []
     count_filter = 0
-    company_filter = 0
     count = 0
     for data in camera_data:
         count += 1
@@ -29,13 +27,9 @@ def home(request):
         count_filter += 1
         if count_filter <= 4:
             Card_filter.append(data)
-    for data in company_data:
-        company_filter += 1
-        if company_filter <= 8:
-            company_filter.append(data)
     context = {
         "product_data": product_data,
-        "company_data": company_filter,
+        "company_data": company_data,
         "service_data": service_data,
         "camera_data": camera_data,
         "camera_filter": camera_filter,

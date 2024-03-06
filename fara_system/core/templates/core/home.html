@@ -36,11 +36,14 @@
                             </div>
                         </a>
                     </div>
-                    <!-- <dotlottie-player src="https://lottie.host/7401522f-2d8b-4049-ad18-eb0edb6af224/CE9lFrNlEH.json"
-                        background="transparent" speed="1" style="width: 300px; height: 300px" direction="1"
-                        playMode="normal" loop controls autoplay></dotlottie-player> -->
                 </div>
-                <div class="body_on_background_down"></div>
+                <div class="body_on_background_down">
+                    {% for data in social_media %}
+                    <div class="home_socialmedia_item">
+                        <img src="{{data.image.url}}" alt class="">
+                    </div>
+                    {% endfor %}
+                </div>
             </div>
             <!-- <div class="absolute">
                 <div class="absolute inset-0 justify-center">
@@ -124,7 +127,7 @@
             {% endfor %}
         </div>
     </div>
-</div>
+    </div>
 </section>
 <section>
     <div class="sec_project">
@@ -139,14 +142,12 @@
         </div>
         <div class="sec_project_down">
             <div class="grid">
-                {% if data|length != 0 %}
                 {% for data in company_data %}
-                <div></div>
+
                 <div class="grid-item">
                     <img src="{{data.image.url}}" alt class="grid_img">
                 </div>
                 {% endfor %}
-                {% endif %}
             </div>
         </div>
     </div>

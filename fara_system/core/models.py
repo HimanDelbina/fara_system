@@ -206,8 +206,9 @@ class CardHomeModel(models.Model):
 
 class SocialMediaModel(models.Model):
     name = models.CharField(max_length=100, verbose_name="نام شبکه اجتماعی")
+    link = models.CharField(max_length=50, verbose_name="لینک شبکه اجتماعی")
     image = models.ImageField(
-        upload_to="program_image",
+        upload_to="social_image",
         verbose_name="تصویر شبکه اجتماعی",
     )
 
