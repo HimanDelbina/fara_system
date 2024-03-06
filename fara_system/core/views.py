@@ -1,9 +1,8 @@
 from django.shortcuts import render
 from .models import *
-from .forms import *
-from django.views.decorators.csrf import csrf_protect
-
-# Create your views here.
+from django.shortcuts import redirect
+from django.views.decorators.csrf import requires_csrf_token, csrf_protect
+from django.contrib import messages
 
 
 def home(request):
@@ -34,7 +33,6 @@ def home(request):
         company_filter += 1
         if company_filter <= 8:
             company_filter.append(data)
-
     context = {
         "product_data": product_data,
         "company_data": company_filter,
@@ -77,12 +75,19 @@ def camera_select(request, pk):
     return render(request, "core/camera_select.html", context)
 
 
-@csrf_protect
+@requires_csrf_token
 def contact_me(request):
     if request.method == "POST":
-        form = UploadContactMe(request.POST, request.FILES)
-        print(request.FILES)
-        if form.is_valid():
-            form.save()
-        # return redirect(hoeme)
-    return render(request, "core/contact_me.html", {"form": UploadContactMe})
+        contact = ContactMeModel()
+        username = request.POST.get("username")
+        email = request.POST.get("email")
+        phone_number = request.POST.get("phone_number")
+        description = request.POST.get("description")
+        contact.username = username
+        contact.email = email
+        contact.phone_number = phone_number
+        contact.description = description
+        contact.save()
+        messages.info(request, "thanks for everything")
+        return redirect("/")
+    return render(request, "core/contact_me.html")
