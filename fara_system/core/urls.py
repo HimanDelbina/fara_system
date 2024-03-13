@@ -7,5 +7,6 @@ urlpatterns = [
     path("/detailscamera", details_camera, name="detailscamera"),
     path("camera_select/<int:pk>", camera_select),
     path("/contact_me", contact_me, name="contact_me"),
+    path("/programmer", programmer, name="programmer"),
     # path("project/<int:pk>", project_select),
 ]

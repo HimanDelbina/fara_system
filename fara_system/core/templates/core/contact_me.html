@@ -1,13 +1,16 @@
 {% extends './main.html' %} {% block contact_me %}{% load static %}
 <section>
     <div class="sec_contactme">
+        <p class="contactme_description_first">فرا سیستم</p>
         <p class="contactme_description_top">
-            ما از شنیدن نظرات، سوالات و پیشنهادات شما بسیار خوشحالیم. اگر شما سوالی دارید، یا مایل به ارتباط مستقیم با تیم ما هستید، لطفاً از فرم زیر استفاده کنید و ما در اسرع وقت به شما پاسخ خواهیم داد.
+            ما از شنیدن نظرات، سوالات و پیشنهادات شما بسیار خوشحالیم. اگر شما سوالی دارید، یا مایل به ارتباط مستقیم با
+            تیم ما هستید، لطفاً از فرم زیر استفاده کنید و ما در اسرع وقت به شما پاسخ خواهیم داد.
         </p>
         <form action="{% url 'contact_me' %}" , method="POST" class="contactme_form">
             {% csrf_token %}
             <div class="form-group">
-                <input class="form-field" type="username" name="username" type="text" id="username" placeholder="نام و نام خانوادگی">
+                <input class="form-field" type="username" name="username" type="text" id="username"
+                    placeholder="نام و نام خانوادگی">
                 <span>نام</span>
             </div>
             <div class="form-group">
@@ -15,17 +18,18 @@
                 <span>ایمیل</span>
             </div>
             <div class="form-group">
-                <input class="form-field" type="phone_number" name="phone_number" type="text" id="phone_number"  placeholder="موبایل">
+                <input class="form-field" type="phone_number" name="phone_number" type="text" id="phone_number"
+                    placeholder="موبایل">
                 <span>موبایل</span>
             </div>
             <textarea name="description" name="description" id="description" cols="70" rows="10"></textarea>
             <button class="cantactme_button" type="submit">ارسال فرم</button>
         </form>
         <p class="contactme_description_down">همچنین می‌توانید از طریق روش‌های زیر با ما در تماس باشید:</p>
-        <p class="contactme_description_down">ایمیل :</p>
-        <p class="contactme_description_down">تلفن :</p>
-        <p class="contactme_description_down">آدرس :</p>
-        <p class="contactme_description_down">فرا سیستم</p>
+        <p class="contactme_description_down">ایمیل : himandelbina@gmail.com</p>
+        <p class="contactme_description_down">تلفن : 087-3232195</p>
+        <p class="contactme_description_down">آدرس : کردستان سنندج خیابان آزادی</p>
+        <!-- <p class="contactme_description_down">فرا سیستم</p> -->
     </div>
 </section>
 {% endblock contact_me %}

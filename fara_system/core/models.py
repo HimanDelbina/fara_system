@@ -238,5 +238,18 @@ class ContactMeModel(models.Model):
         return self.phone_number
 
     class Meta:
-        verbose_name_plural = "ارتباط با ما"
-        verbose_name = "ارتباط با ما"
+        verbose_name_plural = "ارتباط با ما "
+        verbose_name = "ارتباط با ما "
+
+
+class ContactMeDescriptionModel(models.Model):
+    email = models.CharField(max_length=50, verbose_name="ایمیل")
+    phone_number = models.CharField(max_length=50, verbose_name="شماره موبایل")
+    address = models.TextField(verbose_name="آدرس")
+
+    def __str__(self):
+        return self.phone_number
+
+    class Meta:
+        verbose_name_plural = "ارتباط با ما نمایش"
+        verbose_name = "ارتباط با ما نمایش"

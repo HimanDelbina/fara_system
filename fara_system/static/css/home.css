@@ -395,13 +395,13 @@ h2::before {
     font-size: 16px;
     font-weight: bold;
     transition: all 0.2s ease-in-out;
-    cursor: pointer;
 }
 
 .contact_me:hover {
     border: 0px #000 solid;
     background-color: #678efe;
     color: #ffffff;
+    cursor: pointer;
 }
 
 .home_title {
@@ -605,7 +605,7 @@ h2::before {
 }
 
 .home_socialmedia_item img:hover {
-    height: 25px;
+    height: 30px;
     cursor: pointer;
 }
 
@@ -751,3 +751,23 @@ h2::before {
 .social-button--npmjs::after {
     background: #c12127;
 } */
+
+
+
+
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}

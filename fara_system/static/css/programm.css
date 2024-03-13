@@ -8,8 +8,9 @@
 .programm_top {
     flex-grow: 1;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     /* background-color: brown; */
 }
 
@@ -111,4 +112,51 @@
     width: 90%;
     height: 1px;
     background-image: linear-gradient(to right, transparent, rgb(48, 49, 51), transparent);
+}
+
+.programmer_button {
+    height: 60px;
+    width: 150px;
+    margin-right: 40px;
+    color: #000000;
+    border-radius: 5px;
+    background-color: #F5F7F8;
+    border: 1px #c4c4c4 solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+}
+
+.programmer_button:hover {
+    border: 0px #000 solid;
+    background-color: #678efe;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+.sec_program_page {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }

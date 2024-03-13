@@ -69,6 +69,10 @@ def camera_select(request, pk):
     return render(request, "core/camera_select.html", context)
 
 
+def programmer(request):
+    return render(request, "core/program.html")
+
+
 @requires_csrf_token
 def contact_me(request):
     if request.method == "POST":

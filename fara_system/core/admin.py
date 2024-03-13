@@ -114,6 +114,17 @@ class ContactMeAdmin(admin.ModelAdmin):
         "email",
         "phone_number",
     ]
+# class ContactMeDescriptionAdmin(admin.ModelAdmin):
+#     fields = [
+#         "email",
+#         "phone_number",
+#         "address",
+#     ]
+#     list_display = [
+#         "email",
+#         "phone_number",
+#         "address",
+#     ]
 
 
 class CameraAdmin(admin.ModelAdmin):
@@ -149,3 +160,4 @@ admin.site.register(CameraCategoryModel, CameraCategoryAdmin)
 admin.site.register(CardHomeModel, CardHomeAdmin)
 admin.site.register(SocialMediaModel, SocialMediaAdmin)
 admin.site.register(ContactMeModel, ContactMeAdmin)
+# admin.site.register(ContactMeDescriptionModel, ContactMeDescriptionAdmin)

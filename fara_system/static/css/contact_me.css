@@ -5,27 +5,41 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .contactme_description_top {
     font-family: vazir;
-    font-weight: bold;
+    font-size: 20px;
+    color: #414141;
+    padding-left: 150px;
+    padding-right: 150px;
     direction: rtl;
+}
+
+.contactme_description_first {
+    font-family: vazir;
+    font-weight: bold;
+    /* direction: rtl; */
     justify-content: center;
+    font-size: 50px;
+    font-weight: bold;
+    color: #414141;
 }
 
 .contactme_description_down {
     font-family: vazir;
     font-weight: bold;
     direction: rtl;
-    justify-content: start;
+    justify-content: center;
+    color: #414141;
 }
 
 .contactme_form {
     display: flex;
     flex-direction: column;
-
 }
 
 .cantactme_button {
@@ -42,7 +56,9 @@
     font-weight: bold;
     transition: all 0.2s ease-in-out;
     cursor: pointer;
+    margin-top: 20px;
 }
+
 .cantactme_button:hover {
     border: 0px #000 solid;
     background-color: #678efe;
@@ -167,7 +183,8 @@ html {
     box-sizing: inherit;
 }
 
-*:before, *:after {
+*:before,
+*:after {
     box-sizing: inherit;
 }
 
