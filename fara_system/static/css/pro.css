@@ -1,0 +1,7 @@
+.sec_pro_page {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 0, 0);
+}
